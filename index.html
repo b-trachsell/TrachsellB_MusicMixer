@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dog Orchestra</title>
+	<link rel="stylesheet" href="css/reset.css"> 
+	<link rel="stylesheet" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css2?family=Limelight&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+	<meta name="viewport" content="initial-scale=1.0, width=device-width">
+ 	<section id="siteContainer">
+
+ 			<div id="curtains">
+ 				<img src="images/curtainsRight.png" id="cLeft" alt="Curtains">
+ 				<img src="images/curtainsLeft.png" id="cRight" alt="Curtains">
+ 			</div>
+
+ 			<div id="controlsRight">
+ 				<div class="controlButton" id="openInst">
+ 				</div>
+ 				<div class="controlButton" id="playPause">
+ 				</div>
+ 				<div class="controlButton" id="volume">
+ 				</div>
+ 			</div>
+
+ 			<!------------------- Instructions PopUP -------------------->
+ 			<div id="instructionsBG">
+				<div id="instructions">
+					<div id="closeInstButton">
+						x
+					</div>
+					<h2>Welcome To Dog Orchestra</h2>
+					
+					<p> 
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque arcu purus, facilisis sed tortor a, convallis elementum sem. Suspendisse efficitur pretium metus sed venenatis. Quisque consequat tortor malesuada dolor consectetur volutpat. 
+
+						Integer tellus tellus, hendrerit at condimentum sit amet, vehicula a nulla. Vestibulum ut est vitae nisl vulputate fermentum nec at ipsum. Curabitur euismod ante et vulputate feugiat.
+
+					 	Duis ut turpis consequat, pharetra justo eget, ullamcorper lorem. 
+					</p>
+				</div>
+			</div>
+			<!------------------- Instructions PopUP END -------------------->
+			<div id="drop-zones">
+				<div class="frontRow">
+					<div class="drop-zone"></div>
+					<div class="drop-zone"></div>
+					<div class="drop-zone"></div>
+					<div class="drop-zone"></div>
+					<div class="drop-zone"></div>
+				</div>
+				<div class="backRow">
+					<div class="drop-zone"></div>
+					<div class="drop-zone"></div>
+					<div class="drop-zone"></div>
+					<div class="drop-zone"></div>
+					<div class="drop-zone"></div>
+				</div>
+			</div>
+		
+		
+			<div id="drag-zones">
+				<div class="frontRow">
+					<div class="drag-zone">
+						<img src="images/dogTrumpet.png" class="dog" alt="bottom" data-imgRef="1">
+					</div>
+					<div class="drag-zone">
+						<img src="images/dogTrumpet.png" class="dog" alt="bottom" data-imgRef="2">
+					</div><div class="drag-zone">
+						<img src="images/dogTrumpet.png" class="dog" alt="bottom" data-imgRef="3">
+					</div><div class="drag-zone">
+						<img src="images/dogTrumpet.png" class="dog" alt="bottom" data-imgRef="4">
+					</div><div class="drag-zone">
+						<img src="images/dogTrumpet.png" class="dog" alt="bottom" data-imgRef="5">
+					</div>
+				</div>
+				<div class="backRow">
+					<div class="drag-zone">
+						<img src="images/dogTrumpet.png" class="dog" alt="bottom" data-imgRef="6">
+					</div>
+					<div class="drag-zone">
+						<img src="images/dogTrumpet.png" class="dog" alt="bottom" data-imgRef="7">
+					</div>
+					<div class="drag-zone">
+						<img src="images/dogTrumpet.png" class="dog" alt="bottom" data-imgRef="8">
+					</div>
+					<div class="drag-zone">
+						<img src="images/dogTrumpet.png" class="dog" alt="bottom" data-imgRef="9">
+					</div>
+					<div class="drag-zone">
+						<img src="images/dogTrumpet.png" class="dog" alt="bottom" data-imgRef="0">
+					</div>
+				</div>
+			</div>
+			
+		
+
+
+		<div id="audio">
+			<audio src="audio/harp.mp3"  loop="true">e</audio>
+			<audio src="audio/oboe.mp3"  loop="true">e</audio>
+			<audio src="audio/piano.mp3"  loop="true">e</audio>
+			<audio src="audio/piccolo.mp3"   loop="true">e</audio>
+			<audio src="audio/snareDrum.mp3"   loop="true">e</audio>
+			<audio src="audio/tenorDrum.mp3"   loop="true">e</audio>
+			<audio src="audio/trumpet.mp3"   loop="true">e</audio>
+			<audio src="audio/violin.mp3"   loop="true">e</audio>
+			<audio src="audio/vocal.mp3"   loop="true">e</audio>
+			<audio src="audio/tuba.mp3"   loop="true">e</audio>
+		</div>	
+	</section>
+	<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+#siteContainer{
+	width: 100vw;
+	height: 100vh;
+	background-color:#555;
+}
+
+#cRight{
+	height: 100vh;
+	position: absolute;
+	left: 0;
+	top:0;
+}
+
+#cLeft{
+	height: 100vh;
+	position: absolute;
+	right: 0;
+	top:0;
+}
+
+/*#curtains{
+	width: 100vw;
+	height: 100vh; 
+	position: absolute;
+	left: 0;
+	top:0;
+	background-color: rgba(0, 0, 0, 0.4);
+}*/
+
+
+#drop-zones{
+	height: 47vh;
+	background-color: #f0f;
+	padding: 4vh 0;
+}
+
+#drag-zones{
+	height: 37vh;
+	background-color: blue;
+	padding: 3vh 0 5vh 0;
+}
+
+.frontRow{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	height: 75px;
+	padding: 0 225px 0 325px;
+}
+
+.backRow{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 0 300px 0 250px;
+}
+
+
+.frontRow .drop-zone {
+	background-color: #55f
+}
+
+.backRow .drop-zone {
+	background-color: #88f
+}
+
+
+.frontRow .dog {
+	/*background-color: #f55*/
+}
+
+.backRow .dog {
+	/*background-color: #f88*/
+}
+
+.drop-zone {
+	height:200px;
+	width: 100px;
+	margin:20px;
+	/*background-color: red;*/
+}
+
+.drag-zone {
+	height:200px;
+	width: 100px;
+	/*background-color: red;*/
+}
+
+.dog{
+	height:200px;
+	width: 100px;
+	margin: 0px;
+}
+
+#instructions{
+	position: fixed;
+	padding: 20px;
+	height:500px;
+	width: 700px;
+	left:0;
+	right:0;
+	margin: 100px auto;
+	background-color: #222;
+	border-radius: 25px;
+	border:solid 2px white;
+	text-align: center;
+}
+
+#instructionsBG{
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.7);
+	position: absolute;
+  	top: 0;
+}
+
+.closeInst{display:none;}
+
+#instructions h2{
+	color:white;
+	font-family: 'Limelight', cursive;
+	font-size: 55px;
+	padding: 20px 50px 50px;
+}
+
+#instructions p {
+	color:white;
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 25px;
+	padding: 0 100px;
+	font-family: 'Open Sans', sans-serif ;
+}
+
+#closeInstButton{
+	font-family:  sans-serif ;
+	border-radius: 10px;
+	border:solid 2px black;
+	height:30px;
+	width: 30px;
+	margin-left: auto;
+	line-height: 27px;
+	color:#222;
+	background-color: white;
+	cursor: pointer;
+}
+
+#controlsRight{
+	position: absolute;
+	top:35px;
+	right:35px;
+}
+
+.controlButton{
+	width: 30px;
+	height: 30px;
+	margin: 10px;
+	cursor: pointer;
+	border:2px white solid;
+	background-color: #222;
+	border-radius: 10px;
+}
