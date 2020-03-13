@@ -159,4 +159,7 @@
 	border:2px white solid;
 	background-color: #222;
 	border-radius: 10px;
+	color: white;
+	text-align: center;
+	line-height: 27px;
 }

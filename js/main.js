@@ -7,12 +7,44 @@ const closeButton = document.querySelector("#closeInstButton"),
 	dropZone = document.querySelectorAll('.drop-zone'),
 	dragZone = document.querySelectorAll('.drag-zone'),
 	draggables= document.querySelectorAll(".dog"),
+	ppButton= document.querySelector("#playPause"),
 	audioElements= document.querySelectorAll("audio")
 	;
 
 let globalPaused = false;
-var audioRef ;
+var audioRef;
+const playPause = ["▶","■"];
 const instrumentNames = ["Trumpet", "Harp", "Oboe", "Piano", "Piccolo", "snareDrum", "tenorDrum", "Tuba", "Violin", "Vocal"];
+
+function globalPlayPause(){
+	if (globalPaused == false) {
+		//debugger;
+		audioElements.forEach((a,index) => {
+
+			audioElements[index].pause();
+			ppButton.textContent = playPause[0]
+			console.log("it should be a triangle");
+			globalPaused= true;
+		})
+	}
+	else {
+		//debugger;
+
+		audioElements.forEach((a, index )=> {
+			//debugger;
+			if ( draggables[index].parentElement.className == "drop-zone"){
+				audioElements[index].play();
+				ppButton.textContent = playPause[1]
+				console.log("it should be a square");
+				}
+			else{
+				console.log("ass these dont play");
+				}
+				return;
+			})
+			globalPaused=false;
+	}
+}
 
 
 function playTrack(){
@@ -80,6 +112,7 @@ function allowDrop(event){
 
 closeButton.addEventListener("click", closelightBox);
 openButton.addEventListener("click", openlightBox);
+ppButton.addEventListener("click", globalPlayPause); 
 draggables.forEach(dog => dog.addEventListener('dragstart', allowDrag));
 dropZone.forEach(zone => {
 	zone.addEventListener('dragover', allowDragOver)
