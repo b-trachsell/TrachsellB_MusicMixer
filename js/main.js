@@ -8,53 +8,111 @@ const closeButton = document.querySelector("#closeInstButton"),
 	dragZone = document.querySelectorAll('.drag-zone'),
 	draggables= document.querySelectorAll(".dog"),
 	ppButton= document.querySelector("#playPause"),
+	resetButton= document.querySelector("#reset"),
 	audioElements= document.querySelectorAll("audio")
 	;
 
 let globalPaused = false;
 var audioRef;
 const playPause = ["▶","■"];
-const instrumentNames = ["Trumpet", "Harp", "Oboe", "Piano", "Piccolo", "snareDrum", "tenorDrum", "Tuba", "Violin", "Vocal"];
+const instrumentNames = ["Clarinet", "Piano", "Piccolo", "tenorDrum", "snareDrum", "Trumpet", "Violin",  "Vocal", "Harp"];
+
+
+function reset(){
+
+	dropZone.forEach ((zone, index) => {
+		//goes through each zone
+			if (dropZone[index].children[0] === (undefined)){
+			// dertermines if there is not a child in the zone
+				return;
+			//if so doesn't do anything
+			}
+			else{
+				//if there IS a child
+				dragZone.forEach ((zoned, index) =>{
+					//Go through each dragZone see if it has a child
+					if (dragZone[index].children[0] === (undefined)){
+						//debugger;
+					//if there is not a child already in there
+	    				dragZone[index].appendChild(draggables[index]);
+
+	    				//put the child there
+	    			}
+	    			else{
+	    				return;
+	    				//if there is already a child do nothing
+	    			}
+    			})
+    			audioElements.forEach((a,index) => {
+					//go through each audio element and pause them all
+					audioElements[index].pause();
+				})
+    		}	
+		})
+}
 
 function globalPlayPause(){
 	if (globalPaused == false) {
-		//debugger;
+		//if global paused is false
 		audioElements.forEach((a,index) => {
-
+			//go through each audio element
 			audioElements[index].pause();
+			//and pause it
 			ppButton.textContent = playPause[0]
-			console.log("it should be a triangle");
+			//change the play button
 			globalPaused= true;
+			//and let the program know its paused
 		})
 	}
-	else {
-		//debugger;
+	else if (globalPaused == true) {
+		//if global paused is true
 
 		audioElements.forEach((a, index )=> {
-			//debugger;
+			//go through each audio element
 			if ( draggables[index].parentElement.className == "drop-zone"){
-				audioElements[index].play();
-				ppButton.textContent = playPause[1]
-				console.log("it should be a square");
+				// if it is in the drop zone,
+				
+				if (index == 8){
+					//Harp was being weird
+					//first check if its the harp
+					//if its the harp
+					//fix the harp
+					index = -1;
 				}
+
+				audioElements[index+1].play();
+				// then you play it
+				ppButton.textContent = playPause[1]
+				//change the play button
+				}
+
 			else{
 				console.log("ass these dont play");
 				}
+
+				ppButton.textContent = playPause[1]
+				//if it is in the drag zone do nothing
 				return;
 			})
 			globalPaused=false;
+			console.log(globalPaused);
+			//now set globalPaused to false
 	}
 }
 
 
 function playTrack(){
-	globalPaused=false;
-	audioElements[audioRef].load();
-	audioElements[audioRef].play();
+	if (globalPaused == false){
+		audioElements[audioRef].load();
+		audioElements[audioRef].play();
+	}
+	else{
+		console.log("paused");
+	}
 
 }
 function stopTrack(){
-	globalPaused = true;
+	//globalPaused = true;
 	audioElements[audioRef].pause();
 
 }
@@ -67,7 +125,9 @@ function closelightBox(){
 	//you have to close the light box anyway
 	instrumentNames.forEach((instrument, index) => {
 			draggables[index].id = `dog${instrument}`;
+
 		});
+	//debugger;
 }
 
 function openlightBox(){
@@ -78,7 +138,7 @@ function allowDrag(){
 		console.log('Drag Start!');
 		event.dataTransfer.setData("text/plain", this.id);
 		audioRef = (this.dataset.imgref);
-		//debugger;
+		
 		
 	}
 
@@ -113,6 +173,8 @@ function allowDrop(event){
 closeButton.addEventListener("click", closelightBox);
 openButton.addEventListener("click", openlightBox);
 ppButton.addEventListener("click", globalPlayPause); 
+resetButton.addEventListener("click", reset);
+
 draggables.forEach(dog => dog.addEventListener('dragstart', allowDrag));
 dropZone.forEach(zone => {
 	zone.addEventListener('dragover', allowDragOver)

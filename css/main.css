@@ -1,7 +1,15 @@
 #siteContainer{
 	width: 100vw;
 	height: 100vh;
-	background-color:#555;
+}
+
+#bg{
+	width: 99.7vw;
+	height: 100vh;
+	position: absolute;
+	left: 0;
+	top:0;
+	z-index: -5;
 }
 
 #cRight{
@@ -18,26 +26,49 @@
 	top:0;
 }
 
-/*#curtains{
-	width: 100vw;
-	height: 100vh; 
-	position: absolute;
-	left: 0;
-	top:0;
-	background-color: rgba(0, 0, 0, 0.4);
-}*/
-
-
 #drop-zones{
-	height: 47vh;
-	background-color: #f0f;
-	padding: 4vh 0;
+
+	height: 25vh;
+	/*background-color: #f0f;*/
+	padding: 26vh 0 4vh 0;
+	margin-right : 30px;
+
 }
+
+.drop-zone .dog{
+	
+	animation:  sidetoside 1s infinite ease-in-out alternate, upanddown 0.5s ease-in-out alternate infinite;
+
+}
+
+@keyframes sidetoside{
+	from{
+		margin: -100px 0px 0px -10px;
+	}
+	to{
+		margin: -100px -10px 0px 0px;
+
+	}
+
+}
+
+@keyframes upanddown{
+	from{
+		height: 200px;
+	}
+	to{
+		height: 180px;
+
+	}
+
+}
+
 
 #drag-zones{
 	height: 37vh;
-	background-color: blue;
+	/*background-color: blue;*/
 	padding: 3vh 0 5vh 0;
+	margin-right: 30px;
 }
 
 .frontRow{
@@ -45,7 +76,7 @@
 	flex-direction: row;
 	justify-content: space-between;
 	height: 75px;
-	padding: 0 225px 0 325px;
+	padding: 0px 225px 0 325px;
 }
 
 .backRow{
@@ -56,45 +87,39 @@
 }
 
 
-.frontRow .drop-zone {
-	background-color: #55f
-}
 
-.backRow .drop-zone {
-	background-color: #88f
-}
-
-
-.frontRow .dog {
-	/*background-color: #f55*/
-}
-
-.backRow .dog {
-	/*background-color: #f88*/
-}
-
-.drop-zone {
-	height:200px;
+.drop-zone  {
+	margin-top: 100px;
+	height:50px;
 	width: 100px;
 	margin:20px;
-	/*background-color: red;*/
+	background-color: rgba(0, 0, 0, 0.2);
 }
 
 .drag-zone {
-	height:200px;
+
+	margin-top: 100px;
+	height: 50px;
 	width: 100px;
-	/*background-color: red;*/
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.drag-zone .dog{
+
+	filter: brightness(0.4);
+	z-index: -5;
 }
 
 .dog{
 	height:200px;
 	width: 100px;
 	margin: 0px;
+	margin-top: -100px;
 }
 
 #instructions{
 	position: fixed;
-	padding: 20px;
+	padding: 10px 20px 20px;
 	height:500px;
 	width: 700px;
 	left:0;
@@ -104,6 +129,7 @@
 	border-radius: 25px;
 	border:solid 2px white;
 	text-align: center;
+	z-index: 5;
 }
 
 #instructionsBG{
@@ -112,25 +138,35 @@
 	background-color: rgba(0, 0, 0, 0.7);
 	position: absolute;
   	top: 0;
+  	z-index: 4;
 }
 
 .closeInst{display:none;}
 
 #instructions h2{
-	color:white;
+	color: #FFDC6C;
 	font-family: 'Limelight', cursive;
 	font-size: 55px;
-	padding: 20px 50px 50px;
+	padding: 0px 50px 10px;
 }
 
-#instructions p {
+#instructions  p {
 	color:white;
+	font-size: 15px;
 	font-weight: 300;
-	font-size: 16px;
-	line-height: 25px;
-	padding: 0 100px;
+	line-height: 20px;
+	padding: 4px 70px;
 	font-family: 'Open Sans', sans-serif ;
 }
+
+
+
+.small {
+	color: #C12929;
+	font-size: 13px;
+	font-family: 'Open Sans', sans-serif ;
+}
+
 
 #closeInstButton{
 	font-family:  sans-serif ;
@@ -138,6 +174,7 @@
 	border:solid 2px black;
 	height:30px;
 	width: 30px;
+	margin-top: 10px;
 	margin-left: auto;
 	line-height: 27px;
 	color:#222;
@@ -161,5 +198,6 @@
 	border-radius: 10px;
 	color: white;
 	text-align: center;
-	line-height: 27px;
+	line-height: 29px;
 }
+
