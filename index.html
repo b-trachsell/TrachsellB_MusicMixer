@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Dog Orchestra</title>
+	<link rel="stylesheet" href="css/reset.css"> 
+	<link rel="stylesheet" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css2?family=Limelight&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+	<meta name="viewport" content="initial-scale=1.0, width=device-width">
+ 	<section id="siteContainer">
+ 	<div id="bg">
+ 		<img src="images/BG.svg" alt="background image of a stage">
+ 	</div>
+
+ 			<div id="curtains">
+ 				<img src="images/curtainsRight.png" id="cLeft" alt="Curtains">
+ 				<img src="images/curtainsLeft.png" id="cRight" alt="Curtains">
+ 			</div>
+
+ 			<div id="controlsRight">
+ 				<div class="controlButton" id="openInst">I
+ 				</div>
+ 				<div class="controlButton" id="playPause">■
+ 				</div>
+ 				<div class="controlButton" id="reset"> R
+ 				</div>
+ 			</div>
+
+ 			<!------------------- Instructions PopUP -------------------->
+ 			<div id="instructionsBG">
+				<div id="instructions">
+					<div id="closeInstButton">
+						x
+					</div>
+					<h2>Welcome To Dog Orchestra</h2>
+					
+					<div id="instHead">
+						<div class="small"> MMED-1055 </div>
+						<div class="small">	Music Mixer </div>
+						<div class="small">	Breanna Trachsell </div>
+					</div>
+
+					<p>	These dogs have been practicing for a month straight for this performance. They are some of the best and brightest dogs of their generation. </p>
+					<p>	They have all remarkably perfected their individual parts but due to social distancing, were never able to practice together. </p> 
+					<p>	Until Today. </p>
+					<p> Please do forgive them if they do not play in sync, they are merely dogs you see; and are trying their best </p>
+					<p>	Drag each dog you want to hear play to a spot on the stage. Either drag them back down or hit the pause button in the top right to have them stop.</p>
+					<p> Hit the R button to send everyone back to the floor and begin a new composition</p>
+					<p> Mix and Match the sounds to make your own composition!</p>
+
+					
+				</div>
+			</div>
+			<!------------------- Instructions PopUP END -------------------->
+			<div id="drop-zones">
+				<div class="frontRow">
+					<div class="drop-zone"></div>
+					<div class="drop-zone"></div>
+					<div class="drop-zone"></div>
+					<div class="drop-zone"></div>
+					<div class="drop-zone"></div>
+				</div>
+				<div class="backRow">
+					<div class="drop-zone"></div>
+					<div class="drop-zone"></div>
+					<div class="drop-zone"></div>
+					<div class="drop-zone"></div>
+					<div class="drop-zone"></div>
+				</div>
+			</div>
+		
+		
+			<div id="drag-zones">
+				<div class="frontRow">
+					<div class="drag-zone">
+						<img src="images/Dog_Clarinet.png" class="dog" alt="dog playing clarinet" data-imgRef="1" title="Clarinet">
+							
+					</div>
+					<div class="drag-zone">
+						<img src="images/Dog_Piano.png" class="dog" alt="dog playing piano" data-imgRef="2" title="Piano">
+						
+					</div><div class="drag-zone">
+						<img src="images/Dog_Piccolo.png" class="dog" alt="dog playing the piccolo" data-imgRef="3" title="Piccolo">
+						
+					</div><div class="drag-zone">
+						<img src="images/Dog_Tenor.png" class="dog" alt="dog playing tenor Drum" data-imgRef="4" title="Tenor Drum">
+						
+					</div><div class="drag-zone">
+						<img src="images/Dog_Snare.png" class="dog" alt="dog playing snare Drum" data-imgRef="5" title="Snare Drum">
+						
+					</div>
+				</div>
+				<div class="backRow">
+					<div class="drag-zone">
+						<img src="images/Dog_Trumpet.png" class="dog" alt="dog playing trumpet" data-imgRef="6" title="Trumpet">
+						
+					</div>
+					<div class="drag-zone">
+						<img src="images/Dog_Violin.png" class="dog" alt="dog playing violin" data-imgRef="7" title="Violin">
+						
+					</div>
+					<div class="drag-zone">
+						<img src="images/Dog_Vocal.png" class="dog" alt="dog singing" data-imgRef="8" title='Vocals'>
+						
+					</div>
+					
+					<div class="drag-zone">
+						<img src="images/Dog_Harp.png" class="dog" alt="dog playing the harp" data-imgRef="0" title="Harp">
+						
+					</div>
+				</div>
+			</div>
+			
+		
+
+
+		<div id="audio">
+			<audio src="audio/harp.mp3"  loop>e</audio>
+			<audio src="audio/oboe.mp3"  loop>e</audio>
+			<audio src="audio/piano.mp3"  loop>e</audio>
+			<audio src="audio/piccolo.mp3"   loop>e</audio>
+			<audio src="audio/snareDrum.mp3"   loop>e</audio>
+			<audio src="audio/tenorDrum.mp3"   loop>e</audio>
+			<audio src="audio/trumpet.mp3"   loop>e</audio>
+			<audio src="audio/violin.mp3"   loop>e</audio>
+			<audio src="audio/vocal.mp3"   loop>e</audio>
+		</div>	
+	</section>
+	<script src="js/main.js"></script>
+</body>
+</html>
